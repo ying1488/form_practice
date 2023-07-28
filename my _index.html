@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <link rel="stylesheet" href="index.css">
+    <title>Document</title>
+</head>
+
+
+
+<body>
+    <h1 class="title">New Human </h1>
+
+    <form action="/add" id="createHuman" method="">
+        <div class="field">
+            <label for="firstName"> First name :</label>
+            <div class="control">
+                <input type="text" id="firstName" name="first_name" />
+            </div>
+        </div>
+
+
+        <div class="field">
+            <label for="lastName"> Last name :</label>
+            <div class="control">
+                <input type="text" id="lastName" name="last_name" />
+            </div>
+        </div>
+
+        <div class="field">
+            <label class="label">Birth Year</label>
+            <div class="control">
+                <div class="select">
+                    <input type="month" id="birthYear" name="birth_year" min="1900" max="2023" />
+                </div>
+            </div>
+        </div>
+        </div>
+
+        <button class="button is-info">Submit</button>
+
+    </form>
+
+
+    <!-- store detail in array ,display bellow form  -->
+
+    <div class="container" id="humanCreated">
+
+
+    </div>
+    <script src="my_index.js"></script>
+</body>
+
+</html>
