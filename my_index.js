@@ -30,20 +30,25 @@ function HumanName(first_Name, last_Name) {
 //     console.log(humanFullName);
 // }
 
-const d = new Date();
-let year = d.getFullYear();
+
 
 function onSubmit(e) {
     e.preventDefault();
     const humanFullName = HumanName(InFName.value, InLName.value);
     console.log(humanFullName.full_Name());
     // const humanFullName = InFName.value + ' ' + InLName.value;
+
     const birthyear = InBYear.value;
+    const d = new Date();
+    let year = d.getFullYear();
     const age = year - birthyear.slice(0, 4);
+
     const newLI = document.createElement("div");
     newLI.innerText = humanFullName.full_Name() + " , " + age;
+
     // process form info to add to array
     list.append(newLI);
+
     // clear form 
     InFName.value = " ";
     InLName.value = " ";
