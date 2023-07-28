@@ -13,45 +13,53 @@
 
 
 <body>
-    <h1 class="title">New Human </h1>
+    <h1 class="title is-1"> New Human </h1>
+    <div class="container">
+        <div class="notification is-primary is-light">
 
-    <form action="/add" id="createHuman" method="">
-        <div class="field">
-            <label for="firstName"> First name :</label>
-            <div class="control">
-                <input type="text" id="firstName" name="first_name" />
-            </div>
-        </div>
+            <form class="box" action="/add" id="createHuman" method="">
 
-
-        <div class="field">
-            <label for="lastName"> Last name :</label>
-            <div class="control">
-                <input type="text" id="lastName" name="last_name" />
-            </div>
-        </div>
-
-        <div class="field">
-            <label class="label">Birth Year</label>
-            <div class="control">
-                <div class="select">
-                    <input type="month" id="birthYear" name="birth_year" min="1900" max="2023" />
+                <div class="field">
+                    <label for="firstName"> First Name :</label>
+                    <div class="control">
+                        <input type="text" id="firstName" name="first_name" />
+                    </div>
                 </div>
-            </div>
-        </div>
-        </div>
 
-        <button class="button is-info">Submit</button>
 
-    </form>
+                <div class="field">
+                    <label for="lastName"> Last Name :</label>
+                    <div class="control">
+                        <input type="text" id="lastName" name="last_name" />
+                    </div>
+                </div>
+
+                <div class="field">
+                    <label for="BirthYear"> Birth Year :</label>
+                    <div class="control">
+                        <div class="select">
+                            <input type="month" id="birthYear" name="birth_year" min="1900" max="2023" />
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <button class="button is-info is-light">Submit</button>
+
+            </form>
+        </div>
+    </div>
+    </div>
+
 
 
     <!-- store detail in array ,display bellow form  -->
+    <section class="box is-medium">
+        <div class="container" id="humanCreated">
+        </div>
+    </section>
 
-    <div class="container" id="humanCreated">
-
-
-    </div>
     <script src="my_index.js"></script>
 </body>
 
