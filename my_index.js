@@ -30,20 +30,25 @@ function HumanName(first_Name, last_Name) {
 //     console.log(humanFullName);
 // }
 
-const d = new Date();
-let year = d.getFullYear();
+
 
 function onSubmit(e) {
     e.preventDefault();
     const humanFullName = HumanName(InFName.value, InLName.value);
     console.log(humanFullName.full_Name());
     // const humanFullName = InFName.value + ' ' + InLName.value;
+
     const birthyear = InBYear.value;
+    const d = new Date();
+    let year = d.getFullYear();
     const age = year - birthyear.slice(0, 4);
+
     const newLI = document.createElement("div");
     newLI.innerText = humanFullName.full_Name() + " , " + age;
+
     // process form info to add to array
     list.append(newLI);
+
     // clear form 
     InFName.value = " ";
     InLName.value = " ";
@@ -51,43 +56,24 @@ function onSubmit(e) {
 
 
     // style div with colours 
-
-
-
     const makeRandColor = () => {
         const r = Math.floor(Math.random() * 255);
         const g = Math.floor(Math.random() * 255);
         const b = Math.floor(Math.random() * 255);
         return `rgb(${r},${g},${b})`;
     }
-    const newDiv = newLI.innerText;
+    const newDiv = newLI;
+    //newDiv 
     const newColor = makeRandColor();
-    document.body.div.style.div.background = newColor;
-    newDiv.newColor
+    newDiv.style.backgroundColor = newColor;
+
 
 
 }
 
-
 form.addEventListener("submit", onSubmit);
 
 
-
-// const button = document.querySelector('button');
-// const h1 = document.querySelector('h1');
-
-// button.addEventListener('click', function () {
-//     const newColor = makeRandColor();
-//     document.body.style.backgroundColor = newColor;
-//     h1.innerText = newColor;
-// })
-
-// const makeRandColor = () => {
-//     const r = Math.floor(Math.random() * 255);
-//     const g = Math.floor(Math.random() * 255);
-//     const b = Math.floor(Math.random() * 255);
-//     return `rgb(${r},${g},${b})`;
-// }
 
 
 
