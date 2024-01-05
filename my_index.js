@@ -31,6 +31,9 @@ function HumanName(first_Name, last_Name) {
 // }
 
 
+function helloWorld() {
+    return "Hello World"
+}
 
 function onSubmit(e) {
     e.preventDefault();
